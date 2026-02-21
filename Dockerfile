@@ -22,5 +22,6 @@ RUN dotnet publish "Tienda.API.csproj" -c Release -o /app/publish /p:UseAppHost=
 # Final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
+ENV ASPNETCORE_HTTP_PORTS=8080
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Tienda.API.dll"]
