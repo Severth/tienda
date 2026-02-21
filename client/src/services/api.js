@@ -7,6 +7,8 @@ const api = axios.create({
     },
 });
 
+console.log('API Base URL:', api.defaults.baseURL);
+
 // Interceptor to add Token to every request
 api.interceptors.request.use((config) => {
     const user = localStorage.getItem('user');

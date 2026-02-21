@@ -85,6 +85,8 @@ app.UseCors("AllowReactApp");
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapGet("/", () => "API counts as live!");
+
 app.MapControllers();
 
 app.Run();
