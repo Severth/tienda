@@ -23,7 +23,10 @@ builder.Services.AddSwaggerGen();
 
 // Database Context
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
 
 // Dependency Injection
 builder.Services.AddScoped<IProductRepository, ProductRepository>();

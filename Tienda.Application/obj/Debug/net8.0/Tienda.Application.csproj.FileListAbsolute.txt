@@ -13,3 +13,4 @@ C:\Users\User\Desktop\SEN\Tienda\Tienda.Application\obj\Debug\net8.0\Tienda.Appl
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Application\obj\Debug\net8.0\refint\Tienda.Application.dll
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Application\obj\Debug\net8.0\Tienda.Application.pdb
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Application\obj\Debug\net8.0\ref\Tienda.Application.dll
+C:\Users\User\Desktop\SEN\Tienda\Tienda.Application\obj\Debug\net8.0\Tienda.Application.sourcelink.json

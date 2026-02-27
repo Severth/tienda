@@ -9,3 +9,4 @@ C:\Users\User\Desktop\SEN\Tienda\Tienda.Domain\obj\Debug\net8.0\Tienda.Domain.dl
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Domain\obj\Debug\net8.0\refint\Tienda.Domain.dll
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Domain\obj\Debug\net8.0\Tienda.Domain.pdb
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Domain\obj\Debug\net8.0\ref\Tienda.Domain.dll
+C:\Users\User\Desktop\SEN\Tienda\Tienda.Domain\obj\Debug\net8.0\Tienda.Domain.sourcelink.json

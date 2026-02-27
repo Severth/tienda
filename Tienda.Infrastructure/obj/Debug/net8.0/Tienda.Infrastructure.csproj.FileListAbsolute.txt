@@ -17,3 +17,4 @@ C:\Users\User\Desktop\SEN\Tienda\Tienda.Infrastructure\obj\Debug\net8.0\refint\T
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Infrastructure\obj\Debug\net8.0\Tienda.Infrastructure.pdb
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Infrastructure\obj\Debug\net8.0\Tienda.Infrastructure.genruntimeconfig.cache
 C:\Users\User\Desktop\SEN\Tienda\Tienda.Infrastructure\obj\Debug\net8.0\ref\Tienda.Infrastructure.dll
+C:\Users\User\Desktop\SEN\Tienda\Tienda.Infrastructure\obj\Debug\net8.0\Tienda.Infrastructure.sourcelink.json
