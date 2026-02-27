@@ -67,12 +67,28 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
         policy => policy
-            .AllowAnyOrigin()
+            .SetIsOriginAllowed(origin => true) // Silver bullet for CORS
             .AllowAnyMethod()
-            .AllowAnyHeader());
+            .AllowAnyHeader()
+            .AllowCredentials());
 });
 
 var app = builder.Build();
+
+// Diagnostic Middleware: Ensure CORS headers on EVERY response (even errors)
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Append("Access-Control-Allow-Origin", context.Request.Headers["Origin"]);
+    context.Response.Headers.Append("Access-Control-Allow-Credentials", "true");
+    if (context.Request.Method == "OPTIONS")
+    {
+        context.Response.Headers.Append("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        context.Response.Headers.Append("Access-Control-Allow-Headers", "*");
+        context.Response.StatusCode = 200;
+        return;
+    }
+    await next();
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -89,6 +105,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapGet("/", () => "API counts as live!");
+app.MapGet("/api/health", () => new { status = "Healthy", message = "CORS is active" });
 
 app.MapControllers();
 
