@@ -63,10 +63,11 @@ builder.Services.AddValidatorsFromAssemblyContaining<CreateProductDtoValidator>(
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
-        builder => builder
-            .AllowAnyOrigin()
+        policy => policy
+            .WithOrigins("http://localhost:5173", "https://tienda-dun.vercel.app")
             .AllowAnyMethod()
-            .AllowAnyHeader());
+            .AllowAnyHeader()
+            .AllowCredentials());
 });
 
 var app = builder.Build();
